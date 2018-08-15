@@ -1,0 +1,81 @@
+<%= form_for([@doctor, @patient]) do |f| %>
+
+<% if @patient.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@patient.errors.count, "error")%> prohibited this patient from being saved:</h2>
+    <ul>
+      <% @patient.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="field">
+  <p>
+    <%= f.label :Firstname %><br />
+    <%= f.text_field :firstname %>
+  </p>
+</div>
+
+<div class="field">
+  <p>
+    <%= f.label :Surname %><br />
+    <%= f.text_field :surname %>
+  </p>
+</div>
+
+<div class="field">
+  <p>
+    <%= f.label :Admission_date %><br />
+    <%= f.text_field :admission_date %>
+  </p>
+</div>
+
+<div class="field">
+  <p>
+    <%= f.label :DOB %><br />
+    <%= f.text_field :dob %>
+  </p>
+</div>
+
+<div class="field">
+  <p>
+    <%= f.label :Address %><br />
+    <%= f.text_field :address %>
+  </p>
+</div>
+
+<div class="field">
+  <p>
+    <%= f.label :Phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+</div>
+
+<div class="field">
+  <p>
+  <%= f.label :Email %><br />
+  <%= f.text_field :email %>
+  </p>
+</div>
+
+<div class="field">
+  <p>
+  <%= f.label :Healthy %><br />
+  <%= f.text_field :healthy %>
+  </p>
+</div>
+
+<div class="field">
+  <p>
+  <%= f.label :Notes %><br />
+  <%= f.text_field :notes %>
+  </p>
+</div>
+
+<div class="actions">
+  <%= f.submit %>
+</div>
+
+<% end %>

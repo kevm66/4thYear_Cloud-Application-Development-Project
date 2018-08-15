@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  firstname: MyString
+  surname: MyString
+  dob: 2018-08-15
+  address: MyString
+  phone: MyString
+  email: MyString
+  healthy: false
+  admission_date: 2018-08-15
+  notes: MyString
+  doctor: one
+
+two:
+  firstname: MyString
+  surname: MyString
+  dob: 2018-08-15
+  address: MyString
+  phone: MyString
+  email: MyString
+  healthy: false
+  admission_date: 2018-08-15
+  notes: MyString
+  doctor: two
