@@ -31,5 +31,5 @@
   <%= @patient.notes %>
 </p>
 
-<%= link_to 'Edit', edit_doctor_patient_path(@doctor, @patient) %>
-<%= link_to 'Back', doctor_patients_path(@doctor) %>
+<%= link_to 'Edit', edit_doctor_patient_path(@doctor, @patient), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
+<%= link_to 'Back', doctor_patients_path(@doctor), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>

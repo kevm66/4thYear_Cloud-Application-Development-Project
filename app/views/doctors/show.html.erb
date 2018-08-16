@@ -38,6 +38,6 @@
   </p>
 <% end %>
 
-<%= link_to 'Edit', edit_doctor_path(@doctor) %>
-<%= link_to 'Back', doctors_path %>
-<%= link_to 'Show Patient Details', doctor_patients_path(@doctor) %>
+<%= link_to 'Edit', edit_doctor_path(@doctor), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
+<%= link_to 'Back to home', doctors_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
+<%= link_to 'Show Patient Details', doctor_patients_path(@doctor), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
