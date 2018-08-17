@@ -1,5 +1,8 @@
+<p id="notice"><%= notice %></p>
+
 <h1>Patients of  <%= @doctor.firstname %> <%= @doctor.surname %></h1>
-<table>
+
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
   <tr>
       <th>Firstname</th>
       <th>Surname</th>
@@ -10,9 +13,11 @@
       <th>Email</th>
       <th>Healty</th>
       <th>Notes</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
   </tr>
+
   <% for patient in @patients %>
+
   <tr>
     <td><%= patient.firstname %></td>
     <td><%= patient.surname %></td>
@@ -23,12 +28,15 @@
     <td><%= patient.email %></td>
     <td><%= patient.healthy %></td>
     <td><%= patient.notes %></td>
+    <td></td>
     <td><%= link_to 'Show', doctor_patient_path(@doctor, patient), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %></td>
     <td><%= link_to 'Edit', edit_doctor_patient_path(@doctor, patient), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %></td>
     <td><%= link_to 'Delete', doctor_patient_path(@doctor, patient), method: :delete, data: { confirm: 'Are you sure you want to delete this patient?' }, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %></td>
   </tr>
   <% end %>
 </table>
-<br />
+
+<br/>
+
 <%= link_to 'New patient', new_doctor_patient_path(@doctor), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
 <%= link_to 'Back to doctor', @doctor, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
