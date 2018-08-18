@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Condition: <%= @condition.name %></h1>
+
+<!-- Simple list -->
+<style>
+.demo-list-item {
+  width: 300px;
+}
+</style>
+
+<ul class="demo-list-item mdl-list">
+  <li class="mdl-list__item">
+    <span class="mdl-list__item-primary-content">
+      <strong>Name:</strong>
+      <%= @condition.name %>
+  </li>
+  <li class="mdl-list__item">
+    <span class="mdl-list__item-primary-content">
+      <strong>Severity: </strong>
+      <%= @condition.severity %></span>
+    </li>
+  <li class="mdl-list__item">
+    <span class="mdl-list__item-primary-content">
+      <strong>Medication:</strong>
+      <%= @condition.remedies %></span>
+  </li>
+  <li class="mdl-list__item">
+    <span class="mdl-list__item-primary-content">
+      <strong>Type:</strong>
+      <%= @condition.condition_type %>
+  </li>
+</ul>
+
+<%= link_to 'Edit details', edit_patient_condition_path(@patient, @condition), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
+<td><%= link_to 'Delete', patient_condition_path(@patient, @condition), method: :delete, data: { confirm: 'Are you sure you want to delete this condition?' }, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %></td>
+<%= link_to 'Back to conditions', patient_conditions_path(@patient), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>

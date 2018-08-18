@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  severity: 1
+  remedies: MyString
+  condition_type: MyString
+  patient: one
+
+two:
+  name: MyString
+  severity: 1
+  remedies: MyString
+  condition_type: MyString
+  patient: two

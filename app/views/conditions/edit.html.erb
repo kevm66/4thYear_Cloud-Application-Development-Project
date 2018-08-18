@@ -1,0 +1,7 @@
+<h1>Editing Condition: <%= @condition.name %> </h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Discard changes', patient_condition_path(@patient, @condition), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
+<%= link_to 'Back', :back, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
+<%= link_to 'All conditions', patient_conditions_path(@patient), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>

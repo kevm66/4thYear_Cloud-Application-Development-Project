@@ -1,0 +1,42 @@
+<%= form_for([@patient, @condition]) do |f| %>
+
+<% if @condition.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@condition.errors.count, "error")%> prohibited this condition from being saved:</h2>
+    <ul>
+      <% @condition.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.label :Name, :for => 'condition_name' %>
+    <%= f.text_field :name, :class => 'mdl-textfield__input', :id => 'condition_name', :type => 'text' %>
+</div>
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.label :Severity, :for => 'condition_severity' %>
+    <%= f.text_field :severity, :class => 'mdl-textfield__input', :id => 'condition_severity', :type => 'text' %>
+</div>
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.label :Remedies, :for => 'condition_remedies' %><br/>
+    <%= f.text_field :remedies, :class => 'mdl-textfield__input', :id => 'condition_remedies', :type => 'text'  %>
+</div>
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.label :ConditionType, :for => 'condition_type' %><br/>
+    <%= f.text_field :condition_type, :class => 'mdl-textfield__input', :id => 'condition_type', :type => 'text' %>
+</div>
+
+<br/>
+
+<div class="actions">
+  <%= f.submit "Add/Update Details", :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
+</div>
+
+<br/>
+<br/>
+<% end %>
