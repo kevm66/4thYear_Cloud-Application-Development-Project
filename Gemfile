@@ -6,6 +6,9 @@ ruby '2.5.1'
 #authentication
 gem 'devise'
 
+#material design UI
+gem 'material_design_lite-sass'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 
