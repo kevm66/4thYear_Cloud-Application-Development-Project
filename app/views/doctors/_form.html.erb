@@ -1,8 +1,8 @@
 <%= form_with(model: doctor, local: true) do |form| %>
+
   <% if doctor.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(doctor.errors.count, "error") %> prohibited this doctor from being saved:</h2>
-
       <ul>
       <% doctor.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -12,41 +12,47 @@
   <% end %>
 
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <%= form.text_field :firstname, :class => 'mdl-textfield__input' %>
-    <%= form.label :firstname, :class => 'mdl-textfield__label' %>
+    <%= form.text_field :firstname, :class => 'mdl-textfield__input', :id => 'dfirstname', :type => 'text' %>
+    <%= form.label :firstname, :class => 'mdl-textfield__label', :for => 'dfirstname' %>
   </div>
 
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <%= form.text_field :surname, :class => 'mdl-textfield__input' %>
-    <%= form.label :surname, :class => 'mdl-textfield__label' %>
+    <%= form.text_field :surname, :class => 'mdl-textfield__input', :id => 'dsurname', :type => 'text' %>
+    <%= form.label :surname, :class => 'mdl-textfield__label', :for => 'dsurname'  %>
   </div>
 
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <%= form.date_select :dob, :class => 'mdl-textfield__input' %>
-    <%= form.label :dob, :class => 'mdl-textfield__label' %>
+    <%= form.label :dob, :for => 'ddob'  %>
+    <%= form.date_select :dob, :class => 'mdl-textfield__input', :id => 'ddob', :type => 'text'  %>
   </div>
 
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <%= form.text_field :address, :class => 'mdl-textfield__input' %>
-    <%= form.label :address, :class => 'mdl-textfield__label' %>
+    <%= form.text_field :address, :class => 'mdl-textfield__input', :id => 'daddress', :type => 'text'  %>
+    <%= form.label :address, :class => 'mdl-textfield__label', :for => 'daddress'  %>
   </div>
 
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <%= form.text_field :phone, :class => 'mdl-textfield__input' %>
-    <%= form.label :phone, :class => 'mdl-textfield__label' %>
+    <%= form.text_field :phone, :class => 'mdl-textfield__input', :id => 'dphone', :type => 'text'  %>
+    <%= form.label :phone, :class => 'mdl-textfield__label', :for => 'dphone'  %>
   </div>
 
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <%= form.text_field :email, :class => 'mdl-textfield__input' %>
-    <%= form.label :email, :class => 'mdl-textfield__label' %>
+    <%= form.text_field :email, :class => 'mdl-textfield__input', :id => 'demail', :type => 'text'  %>
+    <%= form.label :email, :class => 'mdl-textfield__label', :for => 'demail'  %>
   </div>
 
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <%= form.text_field :specialisation, :class => 'mdl-textfield__input' %>
-    <%= form.label :specialisation, :class => 'mdl-textfield__label' %>
+    <%= form.text_field :specialisation, :class => 'mdl-textfield__input', :id => 'dspecialisation', :type => 'text'  %>
+    <%= form.label :specialisation, :class => 'mdl-textfield__label', :for => 'dspecialisation'  %>
   </div>
 
-  <div class="actions">
+  <br/>
+
+  <div class="actions, mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
     <%= form.submit %>
   </div>
+
+  <br/>
+  <br/>
+
 <% end %>

@@ -29,21 +29,39 @@
 
   <body>
 
-    <nav role="navigation">
-      <div class="inner">
-        <a href="#nav" class="nav-collapse" id="nav-collapse">Menu</a>
-        <ul class="nav" id="nav">
-          <li><%= link_to "Home", root_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %></li>
-          <%= render 'devise/menu/registration_items' %>
-          <%= render 'devise/menu/login_items' %>
-        </ul>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Smart Health Care</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <%= link_to "Home", root_path, :class => "mdl-navigation__link" %>
+            <a class="mdl-navigation__link" href="">Doctors</a>
+            <a class="mdl-navigation__link" href="">Patients</a>
+            <%= render 'devise/menu/login_items', :class => "mdl-navigation__link" %>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Menu</span>
+        <nav class="mdl-navigation">
+          <%= render 'devise/menu/registration_items', :class => "mdl-navigation__link" %>
+          <!-- <a class="mdl-navigation__link" href="">Link</a> -->
+        </nav>
       </div>
-    </nav>
+      <main class="mdl-layout__content">
+        <div class="page-content"><!-- Your content goes here -->
+          <%= yield %>
 
-    <%= yield %>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        </div>
+      </main>
+    </div>
 
   </body>
 </html>

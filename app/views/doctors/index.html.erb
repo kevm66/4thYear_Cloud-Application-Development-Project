@@ -7,7 +7,7 @@
     <tr>
       <th>Firstname</th>
       <th>Surname</th>
-      <th>Dob</th>
+      <th>Date of Birth</th>
       <th>Address</th>
       <th>Phone</th>
       <th>Email</th>
@@ -30,7 +30,7 @@
       <td><%= doctor.email %></td>
       <td><%= doctor.specialisation %></td>
       <td></td>
-      <td><%= link_to 'Show', doctor, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %></td>
+      <td><%= link_to 'Details', doctor, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %></td>
       <td><%= link_to 'Edit', edit_doctor_path(doctor), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %></td>
       <td><%= link_to 'Delete', doctor, method: :delete, data: { confirm: 'Are you sure you want to delete this doctor?' }, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %></td>
     </tr>
@@ -40,7 +40,7 @@
 
 <br>
 
-<%= link_to 'New Doctor', new_doctor_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
+<%= link_to 'Add New Doctor', new_doctor_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
 
 <h1>Patients</h1>
 

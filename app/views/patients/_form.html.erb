@@ -11,71 +11,57 @@
   </div>
 <% end %>
 
-<div class="field">
-  <p>
-    <%= f.label :Firstname %><br />
-    <%= f.text_field :firstname %>
-  </p>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.text_field :firstname, :class => 'mdl-textfield__input', :id => 'pfirstname', :type => 'text' %>
+    <%= f.label :Firstname, :class => 'mdl-textfield__label', :for => 'pfirstname' %>
 </div>
 
-<div class="field">
-  <p>
-    <%= f.label :Surname %><br />
-    <%= f.text_field :surname %>
-  </p>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.text_field :surname, :class => 'mdl-textfield__input', :id => 'psurname', :type => 'text' %>
+    <%= f.label :Surname, :class => 'mdl-textfield__label', :for => 'psurname' %>
 </div>
 
-<div class="field">
-  <p>
-    <%= f.label :Admission_date %><br />
-    <%= f.text_field :admission_date %>
-  </p>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.label :Admission_date, :for => 'padmission' %>
+    <%= f.date_select :admission_date, :class => 'mdl-textfield__input', :id => 'padmission', :type => 'text'  %>
 </div>
 
-<div class="field">
-  <p>
-    <%= f.label :DOB %><br />
-    <%= f.text_field :dob %>
-  </p>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.label :DOB, :for => 'pdob' %>
+    <%= f.date_select :dob, :class => 'mdl-textfield__input', :id => 'pdob', :type => 'text' %>
 </div>
 
-<div class="field">
-  <p>
-    <%= f.label :Address %><br />
-    <%= f.text_field :address %>
-  </p>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.text_field :address, :class => 'mdl-textfield__input', :id => 'paddress', :type => 'text'   %>
+    <%= f.label :Address, :class => 'mdl-textfield__label', :for => 'paddress' %>
 </div>
 
-<div class="field">
-  <p>
-    <%= f.label :Phone %><br />
-    <%= f.text_field :phone %>
-  </p>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.text_field :phone, :class => 'mdl-textfield__input', :id => 'pphone', :type => 'text' %>
+    <%= f.label :Phone, :class => 'mdl-textfield__label', :for => 'pphone' %>
 </div>
 
-<div class="field">
-  <p>
-  <%= f.label :Email %><br />
-  <%= f.text_field :email %>
-  </p>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+  <%= f.text_field :email, :class => 'mdl-textfield__input', :id => 'pemail', :type => 'text' %>
+  <%= f.label :Email, :class => 'mdl-textfield__label', :for => 'pemail' %>
 </div>
 
-<div class="field">
-  <p>
-  <%= f.label :Healthy %><br />
-  <%= f.text_field :healthy %>
-  </p>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+  <%= f.text_field :healthy, :class => 'mdl-textfield__input', :id => 'phealthy', :type => 'text' %>
+  <%= f.label :Healthy, :class => 'mdl-textfield__label', :for => 'phealthy' %>
 </div>
 
-<div class="field">
-  <p>
-  <%= f.label :Notes %><br />
-  <%= f.text_field :notes %>
-  </p>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+  <%= f.text_field :notes, :class => 'mdl-textfield__input', :id => 'pnotes', :type => 'text' %>
+  <%= f.label :Notes, :class => 'mdl-textfield__label', :for => 'pnotes' %>
 </div>
 
-<div class="actions", 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored'>
+<br/>
+
+<div class="actions, mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
   <%= f.submit %>
 </div>
 
+<br/>
+<br/>
 <% end %>

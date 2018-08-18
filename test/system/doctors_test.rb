@@ -50,6 +50,6 @@ class DoctorsTest < ApplicationSystemTestCase
       click_on "Destroy", match: :first
     end
 
-    assert_text "Doctor was successfully destroyed"
+    assert_text "Doctor was successfully deleted"
   end
 end
