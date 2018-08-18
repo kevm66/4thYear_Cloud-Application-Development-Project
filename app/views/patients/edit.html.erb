@@ -3,5 +3,5 @@
 <%= render 'form' %>
 
 <%= link_to 'Discard changes', doctor_patient_path(@doctor, @patient), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
-<%= link_to 'Back to patient', doctor_patient_path(@doctor, @patient), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
+<%= link_to 'Back', :back, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
 <%= link_to 'All patients', doctor_patients_path(@doctor), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>

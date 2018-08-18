@@ -34,6 +34,10 @@
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation. We hide it in small screens. -->
           <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="waterfall-exp">
+              <i class="material-icons">search</i>
+            </label>
             <%= link_to "Home", root_path, :class => "mdl-navigation__link" %>
             <!-- <a class="mdl-navigation__link" href="">Doctors</a> -->
             <%= link_to 'Doctors', doctors_path, :class => 'mdl-navigation__link' %>
@@ -52,36 +56,26 @@
         </nav>
       </div>
 
-
-
-          <main class="mdl-layout__content">
-
-            <div class="mdl-grid">
-
-              <div class="mdl-cell mdl-cell--1-col"></div>
-              <div class="mdl-cell mdl-cell--10-col">
-
-                <div class="page-content">
-                  <!-- Your content goes here -->
-                    <%= yield %>
-
-                    <p class="notice"><%= notice %></p>
-                    <p class="alert"><%= alert %></p>
-                </div>
-
-              </div>
-              <div class="mdl-cell mdl-cell--1-col"></div>
+      <main class="mdl-layout__content">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--1-col"></div>
+          <div class="mdl-cell mdl-cell--10-col">
+            <div class="page-content">
+              <!-- Content goes here -->
+                <%= yield %>
+                <p class="notice"><%= notice %></p>
+                <p class="alert"><%= alert %></p>
             </div>
-          </main>
-
-
+          </div>
+          <div class="mdl-cell mdl-cell--1-col"></div>
+        </div>
+      </main>
 
       <footer class="mdl-mini-footer">
         <div class="mdl-mini-footer__left-section">
-          <div class="mdl-logo">Title</div>
+          <div class="mdl-logo">© Smart Health Care - Patient Management System, <%= render partial: "footer", locals:{start_year: '2018'} %></a></div>
           <ul class="mdl-mini-footer__link-list">
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Privacy & Terms</a></li>
+            <li><a href="#">Kevin Maher, x14328981, BSHCSD4</li>
           </ul>
         </div>
       </footer>
