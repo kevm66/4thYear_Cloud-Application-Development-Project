@@ -12,54 +12,54 @@
 <% end %>
 
 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.label :Firstname, :for => 'pfirstname' %>
     <%= f.text_field :firstname, :class => 'mdl-textfield__input', :id => 'pfirstname', :type => 'text' %>
-    <%= f.label :Firstname, :class => 'mdl-textfield__label', :for => 'pfirstname' %>
 </div>
 
 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.label :Surname, :for => 'psurname' %>
     <%= f.text_field :surname, :class => 'mdl-textfield__input', :id => 'psurname', :type => 'text' %>
-    <%= f.label :Surname, :class => 'mdl-textfield__label', :for => 'psurname' %>
 </div>
 
 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <%= f.label :Admission_date, :for => 'padmission' %>
-    <%= f.date_select :admission_date, :class => 'mdl-textfield__input', :id => 'padmission', :type => 'text'  %>
+    <%= f.date_select :admission_date, :id => 'padmission', :type => 'text'  %>
 </div>
 
 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <%= f.label :DOB, :for => 'pdob' %>
-    <%= f.date_select :dob, :class => 'mdl-textfield__input', :id => 'pdob', :type => 'text' %>
+    <%= f.date_select :dob, :id => 'pdob', :type => 'text' %>
 </div>
 
 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.label :Address, :for => 'paddress' %>
     <%= f.text_field :address, :class => 'mdl-textfield__input', :id => 'paddress', :type => 'text'   %>
-    <%= f.label :Address, :class => 'mdl-textfield__label', :for => 'paddress' %>
 </div>
 
 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.label :Phone, :for => 'pphone' %>
     <%= f.text_field :phone, :class => 'mdl-textfield__input', :id => 'pphone', :type => 'text' %>
-    <%= f.label :Phone, :class => 'mdl-textfield__label', :for => 'pphone' %>
 </div>
 
 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+  <%= f.label :Email, :for => 'pemail' %>
   <%= f.text_field :email, :class => 'mdl-textfield__input', :id => 'pemail', :type => 'text' %>
-  <%= f.label :Email, :class => 'mdl-textfield__label', :for => 'pemail' %>
 </div>
 
 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+  <%= f.label :Healthy, :for => 'phealthy' %>
   <%= f.text_field :healthy, :class => 'mdl-textfield__input', :id => 'phealthy', :type => 'text' %>
-  <%= f.label :Healthy, :class => 'mdl-textfield__label', :for => 'phealthy' %>
 </div>
 
 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+  <%= f.label :Notes, :for => 'pnotes' %>
   <%= f.text_field :notes, :class => 'mdl-textfield__input', :id => 'pnotes', :type => 'text' %>
-  <%= f.label :Notes, :class => 'mdl-textfield__label', :for => 'pnotes' %>
 </div>
 
 <br/>
 
-<div class="actions, mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-  <%= f.submit %>
+<div class="actions">
+  <%= f.submit "Update details", :class => ' mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
 </div>
 
 <br/>
