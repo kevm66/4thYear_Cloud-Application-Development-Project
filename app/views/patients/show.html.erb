@@ -66,5 +66,6 @@
 
 
 <%= link_to 'Back to home', patients_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
+<%= link_to 'Back to home', :back, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
 <%= link_to 'Show Condition Info', patient_conditions_path(@patient), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
 <%= link_to 'Add New Condition', new_patient_condition_path(@patient), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
