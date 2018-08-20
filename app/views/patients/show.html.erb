@@ -48,8 +48,7 @@
 </ul>
 
 <%= link_to 'Edit details', edit_doctor_patient_path(@doctor, @patient), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
-<td><%= link_to 'Delete', doctor_patient_path(@doctor, @patient), method: :delete, data: { confirm: 'Are you sure you want to delete this patient?' }, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %></td>
-<%= link_to 'Back to patients', doctor_patients_path(@doctor), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
+<%= link_to 'Delete', doctor_patient_path(@doctor, @patient), method: :delete, data: { confirm: 'Are you sure you want to delete this patient?' }, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
 
 <!-- Display the conditions of the patient -->
 <h1><%= @patient.firstname %>  <%= @patient.surname %>'s Conditions</h1>
@@ -64,8 +63,12 @@
   <% end %>
 </ul>
 
-
-<%= link_to 'Back to home', patients_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
-<%= link_to 'Back to home', :back, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
 <%= link_to 'Show Condition Info', patient_conditions_path(@patient), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
 <%= link_to 'Add New Condition', new_patient_condition_path(@patient), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
+
+<br/>
+
+<hr/>
+
+<%= link_to 'Back to home', doctors_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
+<%= link_to 'Back to patients', doctor_patients_path(@doctor), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored' %>
